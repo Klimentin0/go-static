@@ -7,7 +7,7 @@ import (
 
 // basic serving
 func main() {
-	fs := http.FileServer(http.Dir("./public"))
+	fs := http.FileServer(http.Dir("./dist"))
 	http.Handle("/", fs)
 	log.Println("running on :8090")
 	err := http.ListenAndServe(":8090", nil)
